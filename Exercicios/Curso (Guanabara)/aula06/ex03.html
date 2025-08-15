@@ -40,10 +40,16 @@
       </p>
     </main>
     <script>
-      var n1 = window.prompt("Digite um número: ");
-      var n2 = window.prompt("Digite outro número: ");
-      var resultado = n1 + n2;
-      Window.alert("A soma dos números é: " + resultado);
+      let n1 = Number(prompt("Digite um número: "));
+      let n2 = Number(prompt("Digite outro número: "));
+      let s = n1 + n2;
+      window.alert("A soma dos valores é" + String(s)); // + tem efeito de concatenação
+      alert(`A soma de ${n1} e ${n2} é igual a ${s}`);
+      //Precisamos usar o a crase para usar o template string
+      //(number + number ) para adição
+      // (string + string) para concatenação
+      //Converter de String para Number = Number.()
+      //Converter de Number para String = String.()
     </script>
   </body>
 </html>
