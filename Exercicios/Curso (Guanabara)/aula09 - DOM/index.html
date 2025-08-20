@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif">
+      Iniciando estudo em DOM
+    </h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aliquid ut
+      dolorum reiciendis maxime illo provident cumque laboriosam optio, impedit
+      ducimus molestiae sunt tempore modi libero sed in atque quod?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+      officia animi. Maiores, esse delectus. Cum ab totam, officiis omnis ipsam
+      nobis quis autem accusantium distinctio obcaecati doloribus neque laborum
+      beatae?
+    </p>
+    <div id="msg" name="gay">Clique aqui</div>
+    <script>
+      let mensagem = document.getElementById("msg");
+      let body = document.body;
+      let p1 = document.getElementsByTagName("p")[0];
+      window.document.write("Está escrito assim: -- " + p1.innerText);
+      p1.style.color = "red";
+      body.style.background = "blue";
+      mensagem.style.color = "green";
+      mensagem.style.background = "red";
+      let name = document.getElementsByName("gay");
+      [0];
+      name.innerText = "OLÁ ,Mundo!";
+    </script>
+  </body>
+</html>
