@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somando Valores</title>
+    <style>
+      body {
+        background-color: bisque;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 2px 1px rgba(0, 0, 0, 0.151);
+      }
+      #result {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calcular">
+      <form action="cadastro.php" method="get" autocomplete="on">
+        <h1>Somando Valores</h1>
+        <input type="number" name="text1" id="textn1" required />
+        <input type="number" name="text2" id="textn2" required />
+        <input type="button" value="Somar" id="area" />
+        <div id="result">0</div>
+      </form>
+    </div>
+    <script>
+      let area = document.getElementById("area");
+      let numeroUm = document.getElementById("textn1");
+      let numeroDois = document.getElementById("textn2");
+      let result = document.getElementById("result");
+      area.addEventListener("click", somar);
+      let Valor1 = Number(numeroUm.value);
+      let Valor2 = Number(numeroDois.value);
+      function somar() {
+        let soma = Valor1 + Valor2;
+        result.innerHTML = `o resultado de ${Valor1} e ${Valor2} é ${soma}`; //Essas aspas usamos o ALT + 96 no teclado numerico
+        console.log(soma);
+        if (soma === 0) {
+          result.innerText = "Você não digitou nenhum número!";
+        }
+      }
+    </script>
+  </body>
+</html>
