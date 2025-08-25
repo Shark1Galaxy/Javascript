@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detran</title>
+  </head>
+  <body>
+    <main>
+      <div id="multa">
+        <h1>Sistema de multas</h1>
+        <input type="number" name="vel" id="carVelocidade" />
+        <input type="button" value="Verfificar" onclick="contador()" /><br />
+        <output id="resultadoFinal"></output><br />
+        <output id="multadoOuNao"></output>
+      </div>
+    </main>
+
+    <script>
+      function contador() {
+        let = carVelocidade = document.getElementById("carVelocidade");
+        const velocidadeFinal = Number(carVelocidade.value);
+        let resultadoFinal = document.querySelector("output#resultadoFinal");
+        let multadoOuNao = document.getElementById("multadoOuNao");
+
+        if (velocidadeFinal > 60) {
+          resultadoFinal.innerHTML = `a sua velocidade é ${velocidadeFinal} km/h`;
+          multadoOuNao.innerHTML = "Você foi multado!";
+          multadoOuNao.style.color = "red";
+          resultadoFinal.style.color = "red";
+        } else if (velocidadeFinal === 0) {
+          resultadoFinal.innerHTML = "Número inválido";
+        } else {
+          resultadoFinal.innerHTML = `a sua velocidade é ${velocidadeFinal} km/h`;
+          multadoOuNao.innerHTML = "Você não foi multado!";
+          multadoOuNao.style.color = "green";
+          resultadoFinal.style.color = "green";
+        }
+      }
+    </script>
+  </body>
+</html>
