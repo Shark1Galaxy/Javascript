@@ -14,6 +14,47 @@ main {
   box-shadow: 1px 2px 1px black;
   border-radius: 20px;
 }
+form {
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+}
+form input {
+  margin-bottom: 10px;
+}
+form button {
+  display: block;
+  margin: auto;
+  font-size: 15px;
+  font-family: Arial;
+  width: 140px;
+  height: 40px;
+  border-width: 1px;
+  color: #fff;
+  border-color: rgba(0, 98, 143, 0.315);
+  font-weight: bold;
+  border-radius: 10px;
+  text-shadow: 1px 1px 0px #2f6627;
+  background: rgb(0, 98, 143);
+}
+form button:hover {
+  background: rgb(1, 86, 126);
+  cursor: pointer;
+  transform: all 0.5s;
+}
+form button:active {
+  background: rgb(1, 44, 65);
+  cursor: pointer;
+  transform: all 0.5s;
+}
+
+section > output#declaration {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 header,
 footer {
   text-align: center;
