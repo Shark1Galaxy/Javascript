@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="carregar()">
+    <header>
+      <h1>Contador</h1>
+    </header>
+    <main>
+      <section>
+        <div id="inputs">
+          <h2 style="text-align: center;">Cotando as Coisas</h2>
+            <label for="first">Número: </label>
+            <input type="number" name="" id="first">
+            <div id="button">
+                <button type="submit" oninput="somar()">
+                    Contar
+                </button>
+            </div>
+            <div id="operations">
+              <output id="saida-division"></output>
+              <output id="saida-dos-dados"></output>
+            </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>@Marcos Vinicus</p>
+    </footer>
+    <script src="contador.js"></script>
+  </body>
+</html>
