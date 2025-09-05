@@ -13,7 +13,7 @@ console.log(res);
 */
 
 function maiorOuMenor(argumentoo1, argumento2) {
-    if (argumentoo1 > argumento2) {
+    if (argumentoo1.value > argumento2.value) {
         return argumento1 + ' é maior que ' + argumento2;
     } else {
         return argumento1 + ' é menor que ' + argumento2;
