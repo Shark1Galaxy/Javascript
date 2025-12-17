@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Olá,Mundo!</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque in repellat maxime debitis voluptas aperiam voluptate maiores dolorem sit possimus officiis dolores, cumque asperiores laudantium illo vitae aliquid voluptatibus cupiditate.</p>
+        </section>
+    </main>
+    <script>
+        //Eu poderia suar o parseInt() ou parseFloat() para converter a string em número, mas aqui vou usar o Number(), porque ele é mais genérico, e funciona tanto para inteiros quanto para decimais.
+        const digiteNumero2 = Number(window.prompt('Digite um número:')); //Vai retoranr uma string, mas aqui estamos convertendo pra número atraves do Number()
+        const digiteNumero3 = Number(window.prompt('Digite outro número:')); //Vai retoranr uma string, mas aqui estamos convertendo pra número atraves do Number()
+        let resultado = digiteNumero2 + digiteNumero3;
+        window.alert("O resultado da soma entre " + digiteNumero2 + " e " + digiteNumero3 + " é igual a " + String(resultado));
+        window.alert(`O resultado da soma entre ${digiteNumero2} e ${digiteNumero3} é igual a ${resultado}`); //Usando template string, com ` placehoulders ${}
+        window.alert(resultado.lenght); //Convertendo resultado para string
+
+        /*
+        number + number = soma
+        string + string = concatenação
+        string + number = concatenação  
+        number + string = concatenação
+        */
+
+        /*
+        Conversão para String:
+        String(n)
+        n.toString()
+        */
+    </script>
+</body>
+</html>

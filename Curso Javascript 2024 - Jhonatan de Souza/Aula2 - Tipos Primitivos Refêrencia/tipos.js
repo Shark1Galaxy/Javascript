@@ -1,9 +1,9 @@
 let nomeMeu = "Marcos"; // String literal, tanto faz '' ou "" ou `` (template literals);
 let idadeMeu = 30; // Number Literal
 let alturaMeu = 1.75; // Number
-let estaAprovado = true; // Boolean
-let sobrenomeMeu; // Undefined , difernte do Null , o undefined é quando a variavel foi declarada mas não inicializada
-let enderecoMeu = null; // Null pra dizer que litrealmente não tem valor. Caso queria redifinitirar a variavel depois
+let estaAprovado = true || false; // Boolean
+let sobrenomeMeu = undefined; // Undefined , difernte do Null , o undefined é quando a variavel foi declarada mas não inicializada
+let corSelecionado = null; // Null pra dizer que litrealmente não tem valor. Caso queria redifinitirar a variavel depois por exepmlo: uma pagina, onde o usuario pode selecionar uma cor, mas no inicio não tem cor selecionada, então vc define como null ou seja Redfinifir o valor.
 
 //Em javascript, diferente da linguagem C, numeros com ponto flutuante (float) e inteiros (int) são do mesmo tipo: Number, ou seja não existe int e float, como no C que vc precisa definir o tipo do numero
 

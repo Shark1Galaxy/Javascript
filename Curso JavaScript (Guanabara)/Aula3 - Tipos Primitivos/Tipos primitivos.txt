@@ -1,0 +1,114 @@
+Tipos Primitivos em JavaScript
+O JavaScript trata tipos diferentes de dados de maneiras diferentes.
+Alguns tipos são considerados fundamentais, chamados de tipos primitivos.
+
+Os três principais tipos primitivos do JavaScript são:
+
+number → números
+string → textos
+boolean → verdadeiro ou falso (true / false)
+
+A partir deles, surgem outros tipos e subtipos.
+
+📌 Tipo Number
+O tipo number representa qualquer tipo de número, seja inteiro ou decimal.
+
+Exemplos:
+
+10
+6.5
+-3
+🔹 Subtipos de Number
+Dentro de number, existem alguns valores especiais:
+
+Infinity → representa infinito
+
+NaN (Not a Number) → quando um cálculo não resulta em número
+
+Exemplos:
+
+Infinity
+NaN
+📌 Valores Especiais
+🔹 null
+Representa ausência de valor
+
+Geralmente usado quando você quer limpar uma variável
+
+var x = null
+🔹 undefined
+Significa que a variável foi declarada, mas não recebeu valor
+
+var y
+📌 Tipo Boolean
+Representa valores lógicos:
+
+true → verdadeiro
+
+false → falso
+
+Exemplo:
+
+var ligado = true
+📌 Tipo Object
+O tipo object é mais complexo e possui vários subtipos.
+
+Alguns subtipos importantes:
+
+Array → lista de valores
+
+Function → funções
+
+Exemplos:
+
+var lista = []
+var pessoa = {}
+var soma = function(){}
+📌 Operador typeof
+O operador typeof serve para descobrir o tipo de uma variável ou valor.
+
+Exemplo básico:
+var n = 200
+typeof n
+Resultado:
+
+number
+📌 Exemplos Práticos com typeof
+typeof 6
+// number
+
+typeof 6.5
+// number
+
+typeof "6.5"
+// string
+
+typeof []
+// object
+
+typeof {}
+// object
+
+typeof function(){}
+// function
+
+typeof undefined
+// undefined
+
+typeof NaN
+// number
+
+typeof Infinity
+// number
+
+typeof null
+// object
+⚠️ Detalhe Importante
+Um detalhe curioso do JavaScript é que:
+
+typeof null
+Retorna:
+
+object
+Mesmo o null não sendo realmente um objeto.
+Isso é considerado um erro histórico da linguagem, mas foi mantido por compatibilidade.
