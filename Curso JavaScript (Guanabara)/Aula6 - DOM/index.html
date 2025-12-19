@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(0, 183, 255);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18pt;
+            text-align: center;
+        }
+        div {
+            background-color: red;
+            padding: 20px;
+            margin: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article style="font-family: Arial, Helvetica, sans-serif;">
+            <h1>Iniciando estudos com DOM</h1>
+            <p>Aqui vai o resultado</p>
+            <p>Aprendendo a usar o <strong>DOM</strong> e</p>
+            <div id="clique">Clique em MIM</div>
+        </article>
+    </main>
+    <script>
+        let meuCorpo = window.document.body
+        let primeiroParagrafo = window.document.getElementsByTagName('p')[0]
+        //o getElements(no plural)ByTagName - ele pega a tag, no caso h1,p, etc. mas aqui, como existem dois paragrafos, eu preciso por o [] dizendo qual paragrafo eu pego. no caso é 0 - o 1 parágrafo 
+        document.write('Está escrito assim: ' + primeiroParagrafo.innerText)
+        primeiroParagrafo.style.color = 'blue'
+        meuCorpo.style.backgroundColor = "GREEN"
+
+        //innerText - so pega o texto, se a formatação
+        //InnerHTML - pega o html inteiro, inclusive as tags filhas. no caso do paragrafo 2
+        let segundoParagrafo = document.getElementsByTagName('p')[1]
+        alert(segundoParagrafo.innerHTML); //Saida === (Aprendendo a usar o <strong>DOM</strong> e);
+
+        let mensagem = document.getElementById('clique');
+        mensagem.style.background = 'blue';
+        mensagem.innerText = "Estou aguardando!..."
+
+        /*
+        Também funciona let a = document.getElementsByTagName('mensagemm')[0]
+        */
+
+        let recebe = document.querySelector('div#clique'); //É mais pratico e melhor usar!
+        recebe.style.background = "purple";
+
+        
+    </script>
+</body>
+</html>

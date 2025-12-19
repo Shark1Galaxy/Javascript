@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            color: white;
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaga...
+    </div>
+    <script>
+        const areaCompleta = document.querySelector('div#area');
+        //Addeventslist é melhor !
+        areaCompleta.addEventListener('click', clicou); //Click é o nome do evento, e o clicou, o nome da função!
+        areaCompleta.addEventListener('mouseenter', entrar); //mouseenter é o nome do evento, e o clicou, o nome da função!
+        areaCompleta.addEventListener('mouseout', saiu);  //mouseout é o nome do evento, e o clicou, o nome da função!
+
+        //Os addEventListener - eles ouvem e joga na função!
+        function clicou(){
+            areaCompleta.innerText = 'Ciclou!';
+            areaCompleta.style.background = "red";
+        }
+        function entrar(){
+            areaCompleta.style.innerText = "Entrou"
+        }
+        function saiu(){
+            areaCompleta.innerText = "Saiu";
+            areaCompleta.style.background = "green";
+        }
+    </script>
+</body>
+</html>

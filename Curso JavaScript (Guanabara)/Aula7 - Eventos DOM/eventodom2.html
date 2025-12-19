@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        article {
+            margin: auto;
+            background-color: red;
+            width: 50%;
+            padding: 20px;
+        }
+        input#somar2{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Somando Valores</h1>
+            <input type="number" name="texto1" id="texto1">
+            <input type="number" name="texto2" id="texto2">
+            <input type="button" value="Somar" id="somar2">
+            <div id="resultado">
+                Resultado...
+            </div>
+        </article>
+    </main>
+    <script>
+        const areaSomar = document.getElementById('somar2');
+        let divResultado = document.querySelector('div#resultado')
+        areaSomar.addEventListener('click', somar);
+        function somar(){
+            const numero1 = document.getElementById('texto1');
+            const numero2 = document.getElementById('texto2');
+            const convercao1 = Number(numero1.value);
+            const convercao2 = Number(numero2.value);
+            divResultado.innerHTML = `O resultado de ${convercao1} + ${convercao2} é: ${convercao1 + convercao2}`
+
+            //Atalho é: ALT + 9 E 6 TECLADO NUMERICO
+        }
+    </script>
+</body>
+</html>
