@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Sistema de Multas</h1>
+            <input type="number" name="textvelocidade" id="textvel"> km/h
+            <input type="button" value="Verificar" id="buttonverificar">
+            <div id="resultado"></div>
+        </article>
+    </main>
+    <script>
+        const boxVelocity = document.querySelector('input#textvel');
+        const velocityButton = document.querySelector('input#buttonverificar');
+        const resultadoSoma = document.querySelector('div#resultado');
+        velocityButton.addEventListener('click', somar)
+
+        function somar(){
+            let conversorVelocity = Number(boxVelocity.value);
+            //A variavel está dentro por conta que a variável conversorVelocity é definida uma única vez quando a página carrega. Se o usuário alterar o valor no input antes de clicar no botão, a mudança não será refletida, pois o código nunca relê o valor do input. 
+            if(conversorVelocity > 60){
+                resultadoSoma.innerHTML = `<p>Sua velocidade é de ${conversorVelocity} km/h</p>`;
+                resultadoSoma.innerHTML += '<p>Dirija com cuidado!'
+            } else {
+               resultadoSoma.innerHTML = "Você está na velocidade correta!"
+            }
+        }
+    </script>
+</body>
+</html>
