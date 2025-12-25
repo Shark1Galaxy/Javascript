@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Verificador de Idade</h1>
+        </header>
+        <section>
+            <label for="numbermonth">Ano de Nascimento: </label>
+            <input type="number" name="numbermonth" id="numbermonth">
+            <br>
+            <input type="radio" name="genero" id="masculino" checked>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id="feminino">
+            <label for="feminino">Feminino</label>
+            <br>
+            <input type="button" value="Verificar" id="button" onclick="verificar()">
+            <div id="textoIdade">Preencha os dados acima para ver o resultado!</div>
+            <div>
+                <img src="img/idade.png" alt="background-day" id="imagem">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>@Marcos Vinicius</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

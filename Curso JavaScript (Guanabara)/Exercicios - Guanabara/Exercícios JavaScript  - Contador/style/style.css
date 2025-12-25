@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+body {
+    background: rgb(70, 142, 236); /* Fundo azul padrão do curso */
+    font: normal 15pt Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa a altura total da tela */
+    margin: 0;
+}
+
+header {
+    color: white;
+    margin-bottom: 20px;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px; /* Largura fixa para ficar igual um 'card' */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+/* Estilizando os Labels (Textos: Inicio, Fim, Passo) */
+label {
+    font-weight: bold;
+    display: block; /* Força ficar em linha própria */
+    margin-bottom: 5px; /* Espaço entre o texto e a caixa */
+    color: #333;
+}
+
+/* Estilizando as caixas de número */
+input[type="number"] {
+    font-size: 12pt;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ocupa toda a largura do card */
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    margin-bottom: 15px; /* Espaço para o próximo item */
+    outline: none; /* Tira a borda preta ao clicar */
+}
+
+input[type="number"]:focus {
+    border-color: rgb(70, 142, 236); /* Muda a cor da borda ao clicar */
+}
+
+/* Estilizando o botão CONFIRMAR */
+input[type="button"] {
+    background-color: rgb(70, 142, 236);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #1d5c9e; /* Escurece ao passar o mouse */
+}
+
+/* Área do Resultado */
+div#result {
+    margin-top: 20px;
+    font-size: 14pt;
+    text-align: center; /* Centraliza o texto/emojis */
+    line-height: 1.5;
+}
+
+footer {
+    color: white;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 12pt;
+}
