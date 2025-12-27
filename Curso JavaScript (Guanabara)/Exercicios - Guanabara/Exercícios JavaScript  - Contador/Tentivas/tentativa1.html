@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vamos contar</title>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <label for="comeconumero">De: </label>
+        <input type="number" name="comeconumero" id="comeconumero" required>
+        <label for="fimnumero">Até: </label>
+        <input type="number" name="fimnumero" id="fimnumero" required>
+        <label for="passo">Passo:</label>
+        <input type="number" name="passo" id="passo" required>
+        <input type="button" value="CONFIRMAR" onclick="somar()">
+        <div id="result">
+            <p>Preparando a contagem...</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; Marcos Vinicius</p>
+    </footer>
+    <script>
+    function somar(){
+    const firstNumber = document.getElementById('comeconumero');
+    const secondNumber = document.getElementById('fimnumero');
+    const endNumber = document.getElementById('passo');
+    const textResultado = document.querySelector('div#result');
+    
+    if(firstNumber.value.length == '' || secondNumber.value.length == '' || endNumber.value.length == ''){
+        textResultado.innerHTML = 'Impossivel contar!'
+        alert('[ERRO], FALTAM DADOS!')
+    } else {
+        const comecoNumber = Number(firstNumber.value);
+        const fimNumber = Number(secondNumber.value);
+        let passoNumber = Number(endNumber.value); //Como caso ele coloque 0 no passo, eu coloquei let para que a variavel possa ser alterada
+        //E também, o passoNumber signifca: de quanto em quato vc quer a conta? de 1 em 1 = 1, 2 ,3 ,4 ,5 ou de 2 em 2 ,1 ,2 , 4, 6. 8 10
+
+        //Condição para verificar, se caso ele acrescente 0 no passo , ele vai adicionar 1 automaticamente no passo.
+        if(passoNumber <= 0 ){
+            alert('Passo inválido! Vamos considerar que seja 1 Passo');
+            passoNumber = 1 //passoNumber vai valer 1 automaticamente
+        }
+        //Contagem Progressiva
+        if(comecoNumber < fimNumber){ //Como é progressiva, ou seja, enquanto 1, for menor que 10. é progressiva, ou seja é de baixo pra cima 1 < 10
+            for(let contador = comecoNumber; contador <= fimNumber; contador = contador + passoNumber){
+                console.log(contador);
+        }
+    } else {
+        for(let contador = fimNumber; contador >= comecoNumber; contador = contador - passoNumber){
+            console.log('text')
+        }
+    }
+}
+}
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+
+        */
+        //Contagem progressiva
+        const comecoNumber = 1;
+        const fimNumber = 10;
+        let passoNumber = 1;
+        for(let contador1 = comecoNumber; contador1 <= fimNumber; contador1 = contador1 + passoNumber){
+        console.log(contador1)
+        /*
+        Aqui é simples, o começo do numero é 1
+        o fim do numero é 10 , ou seja, ele quer fazer um contador que conta de 1 a 10.
+        o passoNumber, ele basicamente vai dizer, se vai vai de 1 em 1 ou de 2 em 2 depedne do que o usuario escolher.
+
+        Ai, nese caso, o for funciona assim, a variavel declarada contador = comecoNumber, ou seja, ele recebe o oq comecoNumber vai ter Ex: 1 2 3 4 5 6 enfim. 
+
+        Ai, ele vai verificar; contadro é maior ou igual a fimNumber? ou seja 1 < 10? falso. se é falso, ele desce o bloco executa o oq o blocoa baixo tem, que no caso é um console.log(contador), ele vai jopgar o resultado atual de contador, ele no momento ta valendo 1, ent joga no console 1. Ai apos executar o bloco a baixo, ele sobe e executa a terceira linha do for, que é contador = contador + passoNumber.
+
+        Ai oq acontece, ele ta dizendo, eu quero que contador ele receba ele mesmo + o numero que tem em passoNumber, que é 2, ou seja, contadro vai esta valendo 3, pq? pq ele vai fazer, se contador vale no momento 1, e passoNumber vale 2, ele vai somar, certo? ent da 3. ent a partir de agora, contador = 3 vai estar valendo 3.
+
+        Apos isso, ele executar a terceira etapa, ele votla para a verificação da condição. que é contadro <= fimNumber. 
+
+        com 3 não é maior ou igual a 10, ele desce, executa o bloco com o console.log(contador), que vai estavar valendo 3, e dps disso, ele sobe pra terceira parte ali (contador = contador + passoNumber), e aqui o contadro vai estar valaendo 5. e ele volta para a condição (contador <= 10?).
+
+        Ele vai repitir esse loop, até que o contador = esteva valendo um numero que é maior que 10, caso isso acotença, ele simplismete cancela o loop, e o loop para.
+
+        ent, sera jogado no console, de 1 , 3, 5, 7, 9 , se fosse de Passo 1, que é de 1 em 1, ele ia me devolver: 1, 2 ,3 , 4, 5 , 6 ,7 ,8 ,9, 10.
+        pq ele ia somar 1(1), 2(1+1), 3 (2+1), 4(3+1), 5(4+1), 6(5+1), 7(6+1), 8(7+1),9(8+1), 10(9+1).
+        */
+        }
+        console.log('------------------------------------------------')
+
+        //Contagem regressiva
+        const primeiroNumero = 1;
+        const numeroFinal = 10;
+        DeQuantoemQuanto = 2;
+        for(let contador = numeroFinal; contador >= primeiroNumero; contador = contador - DeQuantoemQuanto){
+            console.log(contador)
+            /*
+        // CONTADOR REGRESSIVO
+        // Aqui é simples, o começo do número é 10
+        // o fim do número é 1, ou seja, ele quer fazer um contador que conte de 10 até 1 (de trás pra frente).
+        // o passoNumber, ele basicamente vai dizer se vai diminuir de 1 em 1 ou de 2 em 2 dependendo do que o usuário escolher.
+
+        // Aí, nesse caso, o for funciona assim: a variável declarada contador = comecoNumber, ou seja, ele recebe o que comecoNumber vai ter. Ex: 10, 9, 8, 7, 6 enfim.
+
+        // Aí, ele vai verificar: contador é maior ou igual a fimNumber? ou seja 10 >= 1? verdadeiro. Se é verdadeiro, ele desce o bloco e executa o que o bloco abaixo tem, que no caso é um console.log(contador) e oq esse console.log faz? Ele vai jogar o resultado atual de contador, que no momento tá valendo 10, então joga no console 10. Aí após executar o bloco abaixo, ele sobe e executa a terceira linha do for, que é contador = contador - passoNumber.
+
+        // Aí o que acontece, ele tá dizendo: eu quero que contador ele receba ele mesmo - o número que tem em passoNumber, que é 2, ou seja, contador vai estar valendo 8, pq? pq ele vai fazer, se contador vale no momento 10, e passoNumber vale 2, ele vai subtrair, certo? então dá 8. Então a partir de agora, contador = 8 vai estar valendo 8.
+
+        // Após ele executar a terceira etapa, ele volta para a verificação da condição, que é contador >= fimNumber (é maior ou igual a 1?).
+
+        // 8 é maior ou igual a 1? Sim! Então ele desce, executa o bloco com o console.log(contador), que vai estar valendo 8, e depois disso, ele sobe pra terceira parte ali (contador = contador - passoNumber), e aqui o contador vai estar valendo 6. E ele volta para a condição (contador >= 1?).
+
+        // Ele vai repetir esse loop, até que o contador esteja valendo um número que é menor que 1, caso isso aconteça, ele simplesmente cancela o loop, e o loop para.
+        onde no final 0, pq o penultimo resultado é 2, ou seja, 2 - 2 = 0. onde n é maior ou igaul a 1, logo, se encerra o codigo!
+
+        // Então, será jogado no console, 10, 8, 6, 4, 2. Se fosse de Passo 1, que é de 1 em 1, ele ia me devolver: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1.
+        // Pq ele ia subtrair: 10, 9(10-1), 8(9-1), 7(8-1), 6(7-1), 5(6-1), 4(5-1), 3(4-1), 2(3-1), 1(2-1).
+            */
+        }
+    </script>
+</body>
+</html>
