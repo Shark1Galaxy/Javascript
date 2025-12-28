@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vamos contar</title>
+    <style>
+        /* Importando uma fonte moderna do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Fundo gradiente moderno */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-weight: 600;
+            font-size: 2.5em;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.95); /* Quase branco sólido */
+            border-radius: 20px;
+            padding: 30px;
+            width: 450px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Sombra suave e profunda */
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px); /* Leve flutuação ao passar o mouse */
+        }
+
+        /* Área de controles (label, input, button) */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        label {
+            font-weight: 600;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        input[type="number"] {
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            width: 100%;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s;
+            text-align: center;
+        }
+
+        input[type="number"]:focus {
+            border-color: #764ba2;
+        }
+
+        input[type="button"] {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px; /* Botão arredondado */
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+
+        input[type="button"]:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(118, 75, 162, 0.6);
+        }
+
+        input[type="button"]:active {
+            transform: scale(0.98);
+        }
+
+        /* Área de resultado */
+        #tabuada {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f0f2f5;
+            border-radius: 10px;
+            min-height: 50px;
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.6;
+            border: 1px dashed #ccc;
+        }
+
+        footer {
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        /* Responsividade */
+        @media (max-width: 500px) {
+            section {
+                width: 90%;
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    
+    <section>
+        <div class="controls">
+            <label for="comeconumero">Digite um número:</label>
+            <input type="number" name="comeconumero" id="comeconumero" placeholder="Ex: 5" required>
+            <input type="button" value="Gerar Tabuada" onclick="somar()">
+        </div>
+
+        <select name="tabuada" id="tabuada" size="10">
+            <option>DIGITE UM NUMERO ACIMA!</option>
+        </select>
+    </section>
+    <footer>
+        <p>&copy; Marcos Vinicius</p>
+    </footer>
+
+    <script src="taby.js"></script>
+</body>
+</html>

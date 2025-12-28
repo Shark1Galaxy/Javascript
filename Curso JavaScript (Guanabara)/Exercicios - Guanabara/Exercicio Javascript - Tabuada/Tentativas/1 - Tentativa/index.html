@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vamos contar</title>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    
+    <section>
+        <div class="controls">
+            <label for="comeconumero">Digite um número:</label>
+            <input type="number" name="comeconumero" id="comeconumero" placeholder="Ex: 5" required>
+            <input type="button" value="Gerar Tabuada" onclick="somar()">
+        </div>
+
+        <select name="tabuada" id="tabuada" size="10">
+            <option>DIGITE UM NUMERO ACIMA!</option>
+        </select>
+    </section>
+    <footer>
+        <p>&copy; Marcos Vinicius</p>
+    </footer>
+
+    <script>
+        function somar(){
+            const entradaTabuada = document.querySelector('input#comeconumero'); //Aqui estou puxando os dados da entrada do input em DOM
+            const selectTabuada = document.querySelector('select#tabuada'); //Aqui estou puxando o select, pelo DOM tbm
+
+            //Verificação padrão para caso não seja inserido nenhum valor
+            if(entradaTabuada.value.length = '' || entradaTabuada.value.length === 0){
+                alert('[ERRO] Por favor, digite qual tabuada gostaria!')
+            } else {
+
+                selectTabuada.innerHTML = ''; //Limpa o conteúdo do select antes de preenchê-lo novamente, ou seja, essa linha é executada quando a função somar() é chamada (ao clicar no botão), evitando que os valores anteriores se acumulem.
+
+                const entradaConversao = Number(entradaTabuada.value); //Convertendo a string do input que vai entrar para Number 
+
+                for(let contador = 0; contador <=10; contador++){ //Laço simples, de loop, onde, enquanto o contador for menor ou = a 10, sempre sera incrementado + 1
+
+                    const optionsTabuada = document.createElement('option') // Estou criando um elemento <option> que será adicionado dentro do <select>
+
+                    optionsTabuada.textContent = `${entradaConversao} x ${contador}= ${entradaConversao * contador}` // Aqui estou definindo o texto que será exibido dentro da option
+
+                    selectTabuada.appendChild(optionsTabuada) // Adiciona a option criada dentro do select, fazendo ela aparecer na tela
+
+                    //Criar elemento → definir conteúdo → adicionar ao DOM
+                }
+            }
+        }
+    </script>
+</body>
+</html>
