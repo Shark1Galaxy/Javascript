@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste  2</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>TABUADA</h1>
+            <label for="entradadados">Number: </label>
+            <input type="number" name="entradadados" id="entradadados"0>
+            <input type="button" value="Contar" onclick="calcularTabuada()">
+            <br>
+            <br>
+            <select name="saidaTabuada" id="saidaTabuada" size="11">
+                <option>Dados aqui escreva</option>
+            </select>
+        </section>
+    </main>
+    <script>
+        function calcularTabuada(){
+            const entradaDados = document.querySelector('input#entradadados');
+            const selectDados = document.querySelector('select#saidaTabuada')
+
+            if(entradaDados.value.length === 0){
+                alert('houve um erro, tente novamente')
+            } else {
+                selectDados.innerHTML = '';
+                const conversaoDados =  Number(entradaDados.value)
+                for(let contador = 0; contador <= 10; contador++){
+                    const dadosOpition = document.createElement('option')
+                   dadosOpition.textContent = `${conversaoDados} x ${contador} = ${conversaoDados * contador}`
+                   selectDados.appendChild(dadosOpition)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

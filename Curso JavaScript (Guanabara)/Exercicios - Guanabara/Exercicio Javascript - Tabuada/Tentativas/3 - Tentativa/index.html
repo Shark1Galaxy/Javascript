@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE 3</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tabuada de </h1>
+            <label for="entradadados">Digite um numero: </label>
+            <input type="number" name="entradadados" id="entradadados" required>
+            <input type="button" value="Confirmar" onclick="somar()">
+            <select name="saidaDados" id="saidaDados" size="11">
+                <option>Dados</option>
+            </select>
+        </section>
+    </main>
+    <script>
+        function somar(){
+            const entradadDados = document.querySelector("input#entradados")
+            const selectDados = document.querySelector('select#saidaDados')
+
+            if(entradadDados.value.length === 0){
+                alerta('erro')
+            } else {
+                selectDados.innerHTML = '';
+                const conversaoNumber = Number(entradadDados.value);
+                for(let contador = 0; contador <= 10; contador++){
+                    const criandoOpition = document.createElement('option');
+                    criandoOpition.textContent = conversaoNumber * contador
+                    selectDados.appendChild(criandoOpition)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
