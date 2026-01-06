@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar se é string ou não</title>
+</head>
+<body>
+    <main>
+        <section>
+            <input type="text" name="entrada-dados" id="entrada-dados" placeholder="Digite algo aqui">
+            <input type="button" value="Verificar" onclick="verificarDados()">
+            <div id="resultado"></div>
+        </section>
+    </main>
+    <script>
+        const entradaDados = document.querySelector('input#entrada-dados');
+
+        /*
+        Entrada = 0 Saida = Number
+        //Processo
+        //Nymber
+        Entrada = M Saida = String
+        */
+
+        function verificarDados(){
+            if(Number(entradaDados.value)){
+                console.log('Number')
+            } else {
+                console.log('String')
+            }
+        }
+    </script>
+</body>
+</html>
