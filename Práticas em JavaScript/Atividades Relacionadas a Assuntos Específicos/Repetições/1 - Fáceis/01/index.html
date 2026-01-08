@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valido ou Não valido</title>
+    <style></style>
+</head>
+<body>
+    <main>
+        <section>
+            <input type="number" name="numero" id="dadostabuadad" required>
+            <input type="button" value="Confirmar" onclick="somar()">
+            <div id="resultado">
+                d
+            </div>
+        </section>
+    </main>
+    <script>
+        function somar(){
+            const entradaDados = document.querySelector('input#dadostabuadad');
+            const conversaoDados = Number(entradaDados.value)
+            const tabuadaText = document.querySelector("div#resultado");
+            
+            tabuadaText.innerHTML = '';
+            for(let contador = 0; contador <= 10; contador++){
+                tabuadaText.innerHTML += `${conversaoDados} x ${contador} = ${conversaoDados * contador}<br>`
+            }
+        }
+    </script>
+</body>
+</html>

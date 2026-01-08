@@ -16,14 +16,16 @@
         document.body.innerHTML += `[Template String] O seu nome completo é <strong>${nomePessoa}</strong><br>`;
         document.body.innerHTML += `[Length] O seu nome tem <strong>${nomePessoa.length}</strong> letras contando com os espaços<br>`;
         document.body.innerHTML += `[Slice] A segunda letra do seu nome é: <strong>${nomePessoa.slice(6,15)}</strong><br>`;
-        document.body.innerHTML += `[] A PRIMEIRA letra do seu nome é : <strong>${nomePessoa[0]}</strong><br>`
-        document.body.innerHTML += `[] A SEGUNDA letra do seu nome é : <strong>${nomePessoa[1]}</strong><br>`
+        document.body.innerHTML += `[Pesquisar String] A PRIMEIRA letra do seu nome é : <strong>${nomePessoa[0]}</strong><br>`
+        document.body.innerHTML += `[Pesquisar String] A SEGUNDA letra do seu nome é : <strong>${nomePessoa[1]}</strong><br>`
         document.body.innerHTML += `[indexOF] O primeiro indice onde está a letra A é: <strong>${nomePessoa.indexOf('a')}</strong> posição <br>`;
         document.body.innerHTML += `[lastIndexOf] o último indice onde está a letra A é: <strong>${nomePessoa.lastIndexOf('a')}</strong><br>`;
         document.body.innerHTML += `[slice] As últimas 3 letras do seu nome é: <strong>${nomePessoa.slice(-3,).split('')}</strong> <br>`;
         document.body.innerHTML += `[split] as palavras do seu nome são: <strong>${nomePessoa.split(" ")}</strong> <br>`;
-        document.body.innerHTML += `O seu nome em letras maisculas são: <strong>${nomePessoa.toUpperCase()}</strong><br>`;
-        document.body.innerHTML += `O seu nome em letras minusculas são: <strong>${nomePessoa.toLowerCase()}</strong>`;
+        document.body.innerHTML += `[ToUpperCase] O seu nome em letras maisculas são: <strong>${nomePessoa.toUpperCase()}</strong><br>`;
+        document.body.innerHTML += `[toLowerCase] O seu nome em letras minusculas são: <strong>${nomePessoa.toLowerCase()}</strong><br>`;
+        document.body.innerHTML += `[includes] A letra V, está ou não no seu nome? : <strong>${nomePessoa.includes('V')}</strong><br>`;
+        document.body.innerHTML += ``;
     </script>
-</body>
+</body> 
 </html>

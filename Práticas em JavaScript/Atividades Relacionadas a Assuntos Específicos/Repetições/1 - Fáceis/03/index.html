@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valido ou Não valido</title>
+    <style></style>
+</head>
+<body>
+    <script>
+        const textoP = document.createElement('div')
+        for(let contador = 1000; contador <= 2000; contador++){
+            if(contador % 11 === 2){
+            textoP.innerHTML += `${contador} - sobra 2<br><br>`;
+            document.body.appendChild(textoP)
+            }else {
+                console.log(`${contador} não sobra 2`)
+            }
+        }
+    </script>
+</body>
+</html>
