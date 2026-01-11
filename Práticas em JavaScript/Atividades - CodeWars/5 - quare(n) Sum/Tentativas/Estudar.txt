@@ -1,0 +1,5 @@
+function squareSum(numbers){
+  return numbers.reduce((sum,num) => sum + (num * num), 0);
+}
+
+Estudar mais sobre essa forma e fazer com arroy funcitons

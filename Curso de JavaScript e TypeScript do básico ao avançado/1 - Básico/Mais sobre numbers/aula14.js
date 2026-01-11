@@ -1,9 +1,9 @@
 //https://www.w3schools.com/js/js_number_methods.asp#mark_isnan - Olhar mais
 //IEEE 754-2008 - Pesquisar sobre em JS PARA TER PRESSIÃO
-let numeroFirst = 0.7; //Number //Valores literaias , são valores sem a variavel
+let numeroFirst = 0.7; //Number 
 let numeroSecond = 0.1; //Number
 
-//Pode existir uma certa impressão, nos numeros, ent para que seja correto esse número, podemos usar ou dessa forma!
+//Pode existir uma certa impressão, nos numeros, ent para que seja correto esse número, podemos usar essa forma!
 numeroFirst = ((numeroFirst * 100) + (numeroSecond * 100)) / 100 //0.8
 numeroFirst = ((numeroFirst * 100) + (numeroSecond * 100)) / 100 //0.9
 numeroFirst = ((numeroFirst * 100) + (numeroSecond * 100)) / 100 //1.0
@@ -46,6 +46,7 @@ console.log(um1.toString(2)); //Aqui é uma representação binaria do número, 
 console.log(um1.toFixed(2)) //Ele retorna uma string com o número escrito com a quantidade especificada de casas decimais, ou seja, quantos numeros serão mostrados apos o (.): toFixed(2)É perfeito para trabalhar com dinheiro.
 console.log(um1.toPrecision(2)) //Controla o número total de dígitos significativos. muito usado se estiver lidando com precisão matemática
 console.log(Number.isInteger(um1)) //Esse metodo ,ele verifica se o número é inteiro ou não, caso seja , ele retorna true, caso não false;
+console.log(Number.isSafeInteger(numeroFirst))
 const temp = um1 * 'ola'; //Tentar multiplicar com strings não funciona, da NaN - Not a Number
 console.log(Number.isNaN(temp)) //Esse metodo, verifica, se a conta for NaN, caso seja, ele retorna true, caso não , false
 console.log(um1.toExponential()) // Converte o número em notação científica (exponencial) onde retorna uma string // "1.5234e+0", ou seja: mostra o número no formato a × 10^n, de forma bem compacta.

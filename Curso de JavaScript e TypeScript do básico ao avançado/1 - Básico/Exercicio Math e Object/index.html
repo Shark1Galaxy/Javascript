@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Math e Number</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main {
+            position: relative;
+            height: 100vh;
+        }
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: block;
+            padding: 30px;
+            max-width: 80%;
+        }
+        div#resultado{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="formulario">
+            <form autocomplete="off">
+                <label for="numero">Digite um número: </label>
+                <input type="text" name="numero" id="numero-id" required placeholder="Digite um numero por favor" maxlength="3">
+                <input type="button" value="Enviar" onclick="soma()">
+                <div id="resultado">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+
+        const divResultado = document.querySelector('div#resultado')
+
+        function soma() {
+            const dadosNumero = Number(document.querySelector('input#numero-id').value);
+            divResultado.innerHTML = ' ';
+            divResultado.innerHTML += `Seu número é: ${dadosNumero}<br>`
+            divResultado.innerHTML += `A raiz quadrada é: ${Math.sqrt(dadosNumero)}<br>`
+            divResultado.innerHTML += `${dadosNumero} é inteiro?: ${Number.isInteger(dadosNumero)}<br>`
+            divResultado.innerHTML += `${dadosNumero} é NaN (Not a Number): ${Number.isNaN(dadosNumero)}<br>`
+            divResultado.innerHTML += `Arrendondando para baixo: ${Math.floor(dadosNumero)}<br>`
+            divResultado.innerHTML += `Arrendondando para cima: ${Math.ceil(dadosNumero)}<br>`
+            divResultado.innerHTML += `Com duas casas decimais: ${dadosNumero.toFixed(2)}<br>`
+            divResultado.focus()
+            
+        }
+    </script>
+</body>
+</html>
