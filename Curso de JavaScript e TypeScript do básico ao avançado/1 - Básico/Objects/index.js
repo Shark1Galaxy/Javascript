@@ -3,7 +3,7 @@ const pessoal = {
     sobrenome: 'Vinicius',
     idade: '23'
 };
-
+//Pesquisar especificamente sem metodos dentro do
 console.log(pessoal.nome)
 console.log(pessoal.sobrenome)
 console.log(pessoal.idade)
@@ -20,7 +20,7 @@ function criarPessoas(nome, sobrenome, idade) {
         // === SINTAXE CURTA (Short Syntax) do ES6 ===
         // Quando o nome da chave do objeto é igual ao nome da variável/parâmetro,
         // não precisamos escrever "nome: nome". O JS entende automaticamente.
-        nome,       // É o mesmo que fazer: nome: nome
+        nome,       // É o mesmo que fazer: nome: nome 
         sobrenome,  // É o mesmo que fazer: sobrenome: sobrenome
         idade       // É o mesmo que fazer: idade: idade
     };
@@ -40,3 +40,38 @@ const p4 = criarPessoas('Junior', 'Silva', 13);
 // === ACESSANDO OS DADOS ===
 // Usamos o ponto (.) para acessar uma propriedade específica dentro do objeto criado.
 console.log(p.nome, p2.nome, p3.nome, p4.nome);
+
+//--------------------------------------------------------------------------------------
+const informationCar = function(nome,modelo,ano,cor){
+    return { 
+    nome,
+    modelo,
+    ano,
+    cor
+    }
+};
+console.log(informationCar('Nissan','T-CROSS', 2026, 'black').nome);
+console.log(informationCar('Nissan','T-CROSS', 2026, 'black').modelo);
+console.log(informationCar('Nissan','T-CROSS', 2026, 'black').ano);
+console.log(informationCar('Nissan','T-CROSS', 2026, 'black').cor);
+
+const information = (nome,modelo,ano,cor) => {return {nome,modelo,ano,cor}}
+
+console.log(information('Chevrolet','onix-plus', 2023, 'white').nome);
+console.log(information('Chevrolet','onix-plus', 2023, 'white').modelo);
+console.log(information('Chevrolet','onix-plus', 2023, 'white').ano);
+console.log(information('Chevrolet','onix-plus', 2023, 'white').cor);
+
+const info = function(nome,modelo,ano,cor) {
+    return {
+        nome,
+        modelo,
+        ano,
+        cor
+    }
+}
+
+console.log(information('Fiat','pailo', 2013, 'white').nome);
+console.log(information('Fiat','pailo', 2013, 'white').modelo);
+console.log(information('Fiat','pailo', 2013, 'white').ano);
+console.log(information('Fiat','pailo', 2013, 'white').cor);

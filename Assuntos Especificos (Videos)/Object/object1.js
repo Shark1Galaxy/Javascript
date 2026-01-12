@@ -38,6 +38,12 @@ const carrosPropriedades = {
 //Exemplo objeto vazio para adicionar depois (igual o array)
 const carrosPropriedades2 = {};
 
+carrosPropriedades2.primeiroNome = 'Marcos';
+carrosPropriedades2.segundoNome = 'Vinicius';
+carrosPropriedades2.idade = 23;
+carrosPropriedades2.cor = 'azul';
+console.log(carrosPropriedades2 + 'Adicionado em um array vazio')
+
 /*
 Observação:
 
@@ -52,6 +58,7 @@ Para um código mais fácil de ler, mais simples e mais rápido, use objeto lite
 */
 
 //Formas de acessar a propriedade do objeto e efetivamente o seu valor
-
 console.log(carrosPropriedades.nome);
 console.log(carrosPropriedades["nome"]);
+console.log(carrosPropriedades.modelo);
+console.log(carrosPropriedades['modelo']);

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Digite suas informações
+    </header>
+    <main>
+        <section>
+            <form action="#" method="get" class="form">
+                <label for="nome">Nome: </label>
+                <input type="text" name="name" id="nome" required minlength="10" maxlength="10" placeholder="Digite seu nome">
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sore" id="sobrenome" required min="10" maxlength="10" placeholder="Digite seu sobrenome">
+
+                <label for="peso">Peso:</label>
+                <input type="number" name="ps" id="peso" required>
+
+                <label for="altura">Altura: </label>
+                <input type="number" name="al" id="altura" required max="3">
+                <button>Enviar</button>
+                <br>
+                <div id="resultado"></div>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

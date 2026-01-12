@@ -11,12 +11,10 @@ var student = {
 
 Saída esperada: name, sclass, rollno
 */
-function estudanteDados(){
-    const estudanteValores = {
-        nome: 'Marcos',
-        sclass: 'VI',
-        rollno: 12
-    }
-    console.log(estudanteValores)
-}
-estudanteDados()
+const estudanteDados = () => {return {nome: 'Marcos',sclass: '3º ANO', rollno: 12}}
+
+const nomePessoa = estudanteDados().nome
+const sclassPessoa = estudanteDados().sclass
+const rollno = estudanteDados().rollno
+
+console.log(nomePessoa, sclassPessoa, rollno)
