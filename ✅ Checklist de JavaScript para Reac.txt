@@ -1,0 +1,69 @@
+✅ Checklist de JavaScript para React
+1. Fundamentos
+
+ var, let, const (usar principalmente let e const) - (X)
+ Tipos de dados (string, number, boolean, array, object) - (X)
+ Operadores (===, &&, ||, !) - (X)
+
+2. Funções
+
+ Funções tradicionais - (X) function nomeFunção()
+ Arrow functions () => {} - (X) const nomeFuncao = () => {}
+ Funções como parâmetros (callbacks)
+ 
+3. Arrays - (X)
+
+ Criar arrays
+
+ map 
+ filter
+ reduce - (X)
+ find 
+ forEach
+
+4. Objetos
+
+ Criar objetos
+ Acessar propriedades - (X)
+ Destructuring
+ Atualizar objetos sem mutar (imutabilidade)
+
+5. Spread operator (...)
+
+ Copiar arrays
+ Copiar objetos
+ Adicionar/remover itens sem modificar o original
+
+6. Condicionais
+
+ if / else - (X)
+ Operador ternário condicao ? a : b - (X)
+ && para renderização condicional - (X)
+
+7. Escopo e contexto
+
+ Escopo de bloco
+ Closures (conceito)
+
+8. Assíncrono
+
+ Promises
+ async / await
+ fetch (requisições HTTP)
+ try / catch
+
+9. Módulos
+
+ import
+ export default
+ export {}
+
+10. DOM (básico)
+
+ querySelector - (X)
+ Eventos (click, change) - (X)
+
+Não precisa ser expert, só entender o básico.
+
+🎯 Se você dominar isso, já está pronto para React
+👉 React não exige JS avançado, mas exige bons fundamentos.

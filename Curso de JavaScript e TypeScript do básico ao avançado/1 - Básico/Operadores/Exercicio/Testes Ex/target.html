@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body onclick="myFunction(evento)" style="border:1px solid black;padding:8px">
+<h1>HTML DOM Events</h1>
+<h2>The target Property</h2>
+
+<p>Click on any elements in this document to find out which element triggered the onclick event.</p>
+
+<button>This is a button</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(evento) { 
+  let text = evento.target.nodeName;
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

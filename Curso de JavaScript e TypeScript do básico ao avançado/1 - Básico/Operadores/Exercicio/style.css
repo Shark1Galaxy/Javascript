@@ -1,0 +1,125 @@
+        /* Reset básico para remover margens padrões */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Estilo do corpo (Fundo verde-azulado) */
+        body {
+            background-color: #006b76; /* Cor similar à da imagem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Centraliza verticalmente */
+            padding: 20px;
+        }
+
+        /* O Card Branco Principal */
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px; /* Largura máxima profissional */
+            padding: 40px;
+            border-radius: 10px; /* Cantos arredondados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+
+        /* Títulos */
+        h1, h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+
+        /* Estilo da Tabela de Referência */
+        .tabela-imc {
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee; /* Linha divisória sutil */
+            color: #555;
+        }
+
+        .row strong {
+            color: #000;
+        }
+
+        .header-row {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #000;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Estilo do Formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #006b76; /* Cor de destaque ao clicar */
+        }
+
+        /* Botão (Adicionei para ficar funcional visualmente) */
+        button {
+            padding: 15px;
+            background-color: #006b76;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #004d55;
+        }
+
+        .corSegura{
+            background-color: green;
+        }
+        .corMedia{
+            background-color: yellow;
+            color: black;
+        }
+        .corPerigosa{
+            background-color: red;
+            padding: 10px 20px;
+        }
+
+        /* Área de resultado (inicialmente oculta ou vazia) */
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }

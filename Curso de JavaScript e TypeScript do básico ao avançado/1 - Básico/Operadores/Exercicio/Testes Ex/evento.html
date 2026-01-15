@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="button">
+        <input type="button" value="Enviar" id="clicando">
+    </div>
+    <script>
+        const buttonClick = document.getElementById('clicando')
+
+        buttonClick.addEventListener('click', function(evento){
+            console.log(evento)
+            /*
+            O que é o tal do evento?
+            No código, você vê isto: function(evento).
+
+            Quando alguém clica no botão, o navegador (Chrome, Firefox, etc.) cria automaticamente uma pasta cheia de informações sobre aquele clique exato. Essa "pasta" é o que chamamos de evento (ou event object).
+
+            O comando console.log(evento) serve para abrir essa pasta e mostrar tudo o que tem dentro dela na tela do programador (o Console).
+
+            O que tem dentro desse relatório (evento)? O evento não diz apenas "o botão foi clicado". Ele conta detalhes íntimos do clique, como:
+
+            Onde: Em qual pixel exato da tela o mouse estava (coordenadas X e Y).
+            Quem: Qual elemento HTML foi clicado (foi no meio do botão? na borda?).
+            Como: O usuário estava segurando alguma tecla especial (tipo Shift ou Alt) enquanto clicava?
+
+            Tempo: A hora exata (milissegundos) que o clique ocorreu.
+
+            Para que isso serve na prática?
+            Programadores usam as informações desse evento para fazer coisas mais inteligentes do que apenas "clicar". Exemplos:
+
+            Jogos: Em um jogo de tiro, o evento diz exatamente onde o mouse estava (coordenadas X e Y) para saber se você acertou o inimigo ou errou.
+            Teclas de Atalho: O site pode verificar no evento se você clicou segurando o CTRL. Se sim, ele abre o link em uma nova aba; se não, abre na mesma.
+            Apps de Desenho: Quando você arrasta o mouse no Paint, o programa usa o evento milhares de vezes por segundo para saber onde pintar a linha.
+            Impedir erros: Em formulários, o programador usa o evento para cancelar o envio se os dados estiverem errados (usando um comando chamado preventDefault).
+            */
+        })
+    </script>
+</body>
+</html>
