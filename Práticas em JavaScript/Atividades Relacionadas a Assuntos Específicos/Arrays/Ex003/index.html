@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form autocomplete="on">
+            <label for="">Digite 3 numeros pfv</label>
+            <input type="number" name="numero" id="number" required placeholder="Digite os números por favor" min="1" max="999">
+            <div id="resultado"></div>
+            <input type="button" value="ENVIAR" id="button" onclick="clicou()">
+        </form>
+    </main>
+    <script>
+        const valoresEntrando = document.querySelector("input#number");
+        const resultadoFinal = document.querySelector('div#resultado');
+        let arrayVazia = []
+        
+        function clicou(){
+          if(arrayVazia.length >= 3){
+            resultadoFinal.innerHTML = '';
+            resultadoFinal.innerHTML += `Na ordem decrescente é: ${arrayVazia.reverse()}`;
+            arrayVazia = []
+          } else {
+            arrayVazia.push(Number(valoresEntrando.value))
+            resultadoFinal.innerHTML += `Valor ${Number(valoresEntrando.value)} adicionado <br>`
+          }
+        }
+    </script>
+</body>
+</html>

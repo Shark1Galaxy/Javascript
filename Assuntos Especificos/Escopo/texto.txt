@@ -1,0 +1,4 @@
+7. Escopo e contexto
+
+ Escopo de bloco - https://www.w3schools.com/js/js_scope.asp
+ Closures (conceito) - https://www.w3schools.com/js/js_function_closures.asp

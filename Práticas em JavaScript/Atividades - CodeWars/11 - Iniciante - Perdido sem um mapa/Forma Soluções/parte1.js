@@ -1,0 +1,1 @@
+const map = (x) => {return x.map(n => n * 2)}

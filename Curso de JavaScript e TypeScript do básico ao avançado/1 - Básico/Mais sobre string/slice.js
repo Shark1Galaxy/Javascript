@@ -1,2 +1,2 @@
 const nomeMeu = 'Marcos Vinicius de Lima Candido';
-console.log(nomeMeu.slice(-10))
+console.log(nomeMeu.slice(10))

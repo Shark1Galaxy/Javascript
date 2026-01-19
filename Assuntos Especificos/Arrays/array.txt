@@ -1,0 +1,8 @@
+3. Arrays - (X)
+
+ Criar arrays  - (X) 
+ map - https://www.w3schools.com/js/js_array_iteration.asp#mark_map
+ filter - https://www.w3schools.com/js/js_array_iteration.asp#mark_filter
+ reduce - https://www.w3schools.com/js/js_array_iteration.asp#mark_reduce
+ find - https://www.w3schools.com/js/js_array_search.asp#mark_find
+ forEach - http://w3schools.com/js/js_array_iteration.asp#mark_foreach

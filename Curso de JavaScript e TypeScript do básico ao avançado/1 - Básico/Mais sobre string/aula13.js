@@ -1,3 +1,4 @@
+//https://www.w3schools.com/js/js_strings.asp
 //Eu posos usar aspas duplas dentro de aspas simples
 //e par escapar aspas duplas dentro de aspas duplas eu uso \
 //               01234567

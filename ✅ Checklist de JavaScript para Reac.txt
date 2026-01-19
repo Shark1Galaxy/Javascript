@@ -7,14 +7,13 @@
 
 2. Funções
 
- Funções tradicionais - (X) function nomeFunção()
- Arrow functions () => {} - (X) const nomeFuncao = () => {}
- Funções como parâmetros (callbacks)
+ Funções tradicionais  function nomeFunção() - (X)
+ Arrow functions () => {} const nomeFuncao = () => {}  - (X) 
+ Funções como parâmetros (callbacks) - (X)
  
 3. Arrays - (X)
 
- Criar arrays
-
+ Criar arrays  - (X) 
  map 
  filter
  reduce - (X)
@@ -23,7 +22,7 @@
 
 4. Objetos
 
- Criar objetos
+ Criar objetos - (X)
  Acessar propriedades - (X)
  Destructuring
  Atualizar objetos sem mutar (imutabilidade)
