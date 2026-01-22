@@ -1,0 +1,1 @@
+const doubleInteger = i => Number.isInteger(i) ? i * 2 : 'Its not integer number';

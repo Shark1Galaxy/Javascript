@@ -1,0 +1,1 @@
+const getAge = (inputString) => {return Number(inputString[0])}
