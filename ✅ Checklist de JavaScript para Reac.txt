@@ -16,7 +16,7 @@
  Criar arrays  - (X) 
  map 
  filter
- reduce - (X)
+ reduce - 
  find 
  forEach
 
@@ -24,7 +24,7 @@
 
  Criar objetos - (X)
  Acessar propriedades - (X)
- Destructuring
+ Destructuring - (X)
  Atualizar objetos sem mutar (imutabilidade)
 
 5. Spread operator (...)

@@ -6,3 +6,5 @@
  reduce - https://www.w3schools.com/js/js_array_iteration.asp#mark_reduce
  find - https://www.w3schools.com/js/js_array_search.asp#mark_find
  forEach - http://w3schools.com/js/js_array_iteration.asp#mark_foreach
+ join - 
+ split -

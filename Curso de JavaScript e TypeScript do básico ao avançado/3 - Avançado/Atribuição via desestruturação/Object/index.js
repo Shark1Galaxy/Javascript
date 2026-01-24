@@ -19,3 +19,4 @@ console.log(nome1, resto)
 console.log('Pegando o endereço')
 const {endereco: {rua = true, numero} } = pessoa
 console.log(rua, numero)
+

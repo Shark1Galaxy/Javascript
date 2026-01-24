@@ -1,0 +1,2 @@
+const smash = words => words.join(' ') //Ele converter de array pra string, onde esse espaços entras as ' ' é usado pra por um espaso entre as palavras. já que o join transforamr array em string
+console.log(smash())

@@ -5,7 +5,7 @@
 #Bloco009 - 19:10 - 3 forma
 #Bloco009 - 44:31 - Atribuição via desestruturação (Arrays)
 #Bloco009 - 01:03:50 - Atribuição via desestruturação (Object)
-#Bloco009 - 01:14:22 - 
+#Bloco009 - 01:14:22 - For
 
 2 - JavaScript (Avançado)
 #Bloco009(x);#Bloco010;#Bloco011; #Bloco012; #Bloco013; #Bloco014;
