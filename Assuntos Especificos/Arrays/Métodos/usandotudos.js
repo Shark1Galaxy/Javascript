@@ -11,24 +11,25 @@ const produtos = [
   { id: 10, nome: "Caixa de Som Portátil Sony", preco: 1000.00, temDesconto: false, quantidade: 3 }
 ];
 
-const novosProdutos = produtos.map(produtosNovos)
 
-function produtosNovos(produtos){
-    const novoPreco = produtos.temDesconto ? produtos.preco * 0.9 : produtos.preco; //Para te desconto de 9%
+const novosProdutos = produtos.map(function(produtos){
+    const novosPrecos = produtos.temDesconto === true ? produtos.preco * 0.9 : produtos.preco; // Aqui estou acrescentando desconto , onde se ele tiver com true me desconton ele vai adicionar 9% de desconto neles e caso não tenha(false), ele vai me devolver o valor normal sem o desconto.
     return {
         id: produtos.id,
         nome: produtos.nome,
-        preco: novoPreco.toLocaleString('pt-BR',{
-            style:'currency', currency: 'BRL'
-        }), //Conversão para real 
+        preco: novosPrecos.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}), //Aqui estou puxando os novos preços, onde fizemos todo o processo a cima, e estou adicionado um metodo para adicionar os currency do REAL 
         quantidade: produtos.quantidade
     }
-}
+})
+console.log(novosProdutos);
 
-const precoTotal = produtos.reduce((acumulador, produto) => {
-    return acumulador + (produto.preco * produto.quantidade)
+console.log('Filtrando somente os produtos em promoção')
+//Filtrar somente os produtos em promoção
+const produtosEmPromocao = produtos.filter(entradaNumeros => entradaNumeros.temDesconto == true)
+console.log(produtosEmPromocao)
+
+//Qual sera o faturamento, se vendermos todo o estoque
+const precoTotal = produtos.reduce(function(acumulador, produtoPegou){
+    return acumulador + (produtoPegou.preco * produtoPegou.quantidade) // Bom, como funciona aqui, basicamente, nos queremos saber o valor toda se vendermos tudo qeustá em estoque, ou seja, precisamos primeiro pegar o valor do preco e fazer x a quantidade que está em estoque. tipo: preco2 = 45000 so que ele tem 3 em estoque, ou seja, se cada 1 vale 4500 fazemos * 3 que é a quantidade de estoque. com isso toda vez que ele fazer esse calculo. ele vai jogar no acumulador 
 },0)
-
-console.log(precoTotal.toLocaleString('pt-BR',{
-    style: 'currency', currency: 'BRL'
-}))
+console.log(precoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
