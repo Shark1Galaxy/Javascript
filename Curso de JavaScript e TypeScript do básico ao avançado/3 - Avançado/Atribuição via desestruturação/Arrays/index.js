@@ -57,3 +57,4 @@ const [lista1, lista2, lista3] = numeros3;
 // - lista3 → [7, 8, 9]
 // - lista3[2] → 9
 console.log(lista3[2]);
+console.log(...numeros3)

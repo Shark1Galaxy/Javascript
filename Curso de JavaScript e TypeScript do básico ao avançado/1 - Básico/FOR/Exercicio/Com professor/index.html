@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        body{
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        section{
+            background-color: white;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <p>Qualquer Texto que você quiser: </p>
+        </section>
+    </main>
+    <script>
+        //Aqui é um array com 3 objetos, onde cada objeto com as chaves e valores são indices 
+        const elementos = [
+        {tag: 'p', texto: 'Frase1'}, //0
+        {tag: 'div', texto: 'Frase2'}, // 1
+        {tag: 'footer', texto: 'Frase3'}, // 2
+        {tag: 'section', texto: 'Frase4'}, // 3
+        ];
+
+        const containerEntrada = document.querySelector('section');
+        const div = document.createElement('div');
+
+        //Percorrendo o object
+        for(let i = 0; i < elementos.length; i++){
+            const {tag, texto} = elementos[i];// ele ta criando as variaveis tag e texto enquanto ele percorre o elementos do seu indice
+            let elementoCriado = document.createElement(tag);
+            elementoCriado.innerText = texto;
+            div.appendChild(elementoCriado);
+        }
+    containerEntrada.appendChild(div)
+
+    </script>
+</body>
+</html>

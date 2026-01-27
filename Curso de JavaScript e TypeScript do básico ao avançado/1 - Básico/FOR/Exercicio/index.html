@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        </section>
+    </main>
+    <script>
+        const elementos = [
+        {tag: 'p', texto: 'Frase1'},
+        {tag: 'div', texto: 'Frase2'},
+        {tag: 'footer', texto: 'Frase3'},
+        {tag: 'section', texto: 'Frase4'},
+        ]
+
+        function createParagrafo(){
+            const paragrafoCriation = document.createElement('tag');
+            paragrafoCriation.textContent = elementos[0].texto
+            document.body.appendChild(paragrafoCriation)
+        }
+        createParagrafo()
+
+        function createDiv(){
+            const createDiv = document.createElement('div');
+            createDiv.textContent = elementos[1].texto
+            document.body.appendChild(createDiv)
+        }
+        createDiv()
+
+        function createFooter(){
+            const footerCreate = document.createElement('footer');
+            footerCreate.textContent = elementos[2].texto
+            document.body.appendChild(footerCreate)
+        }
+        createFooter()
+
+            function createSection(){
+            const createSection = document.createElement('section');
+            createSection.textContent = elementos[3].texto
+            document.body.appendChild(createSection)
+        }
+        createSection()
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: cyan;
+        }
+        main{
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+        }
+        p,div,footer,section{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Lorem ipsum dolor sit amet con</h1>
+        </section>
+    </main>
+    <script>
+        const elementos = [
+        {tag: 'p', texto: 'Frase1'},
+        {tag: 'div', texto: 'Frase2'},
+        {tag: 'footer', texto: 'Frase3'},
+        {tag: 'section', texto: 'Frase4'},
+        ]
+        const sectionContainer = document.querySelector('section');
+
+        for(let position in elementos){
+            const {tag,texto} = elementos[position]
+            let criandoTags = document.createElement(tag);
+            criandoTags.innerText = texto + ' - ' + tag.toUpperCase()
+            sectionContainer.appendChild(criandoTags)
+        }
+    </script>
+</body>
+</html>
