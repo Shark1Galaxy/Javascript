@@ -5,6 +5,7 @@ console.log('Linha 3');
 console.log('Linha 4');
 console.log('Linha 5');
 
+//For - Geralmente com iteráveis (array ou strings)
 for(let contador = 0; contador <= 10; contador++){ // de 10 em 10
     const par = contador % 2 === 0 ? 'PAR' : 'impar'
     console.log(contador,par)

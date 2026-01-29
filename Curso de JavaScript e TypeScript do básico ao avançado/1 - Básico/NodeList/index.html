@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #005662;
+        }
+        section{
+            background-color: white;
+            padding: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore molestiae optio laudantium, aperiam quidem nihil ipsum eum non facere nisi esse repellat quam quaerat vel impedit praesentium laboriosam harum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore molestiae optio laudantium, aperiam quidem nihil ipsum eum non facere nisi esse repellat quam quaerat vel impedit praesentium laboriosam harum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore molestiae optio laudantium, aperiam quidem nihil ipsum eum non facere nisi esse repellat quam quaerat vel impedit praesentium laboriosam harum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore molestiae optio laudantium, aperiam quidem nihil ipsum eum non facere nisi esse repellat quam quaerat vel impedit praesentium laboriosam harum!</p>
+    </section>
+    <script>
+        const paragrafosTodos = document.querySelectorAll('p');
+
+        const estilosBody = getComputedStyle(document.body)
+        const backgroundColorBody = estilosBody.backgroundColor
+        console.log(backgroundColorBody)
+
+        for(let valor of paragrafosTodos){
+            valor.style.backgroundColor = backgroundColorBody //CarmelCASE do css sem os (-)
+            valor.style.color = "white";
+            valor.style.padding = '20px'
+        }
+    </script>
+</body>
+</html>

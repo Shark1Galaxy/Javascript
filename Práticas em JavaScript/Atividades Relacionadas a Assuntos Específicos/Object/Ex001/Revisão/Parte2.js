@@ -1,0 +1,27 @@
+/*
+Listar Propriedades de um Objeto  
+
+Escreva um programa em JavaScript para listar as propriedades de um objeto JavaScript.  
+Objeto de exemplo:  
+var student = {   
+name : "David Rayy",  
+  sclass : "VI",  
+  rollno : 12  };  
+Saída esperada: name, 
+sclass, rollno 
+
+*/
+const student = {   
+  name : "David Rayy",  
+  sclass : "VI",  
+  rollno : 12  };  
+
+function watchStudante(){
+    for(let chave in student){
+        console.log(student[chave])
+    }
+    for(let chave in student){
+      console.log(chave)
+    }
+}
+watchStudante()
