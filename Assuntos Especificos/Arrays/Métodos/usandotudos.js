@@ -33,3 +33,6 @@ const precoTotal = produtos.reduce(function(acumulador, produtoPegou){
     return acumulador + (produtoPegou.preco * produtoPegou.quantidade) // Bom, como funciona aqui, basicamente, nos queremos saber o valor toda se vendermos tudo qeustá em estoque, ou seja, precisamos primeiro pegar o valor do preco e fazer x a quantidade que está em estoque. tipo: preco2 = 45000 so que ele tem 3 em estoque, ou seja, se cada 1 vale 4500 fazemos * 3 que é a quantidade de estoque. com isso toda vez que ele fazer esse calculo. ele vai jogar no acumulador 
 },0)
 console.log(precoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+
+const maiorPreco = produtos.forEach(precoTabela => precoTabela.preco > 4000)
+console.log(maiorPreco)

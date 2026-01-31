@@ -62,3 +62,50 @@ console.log(carrosPropriedades.nome);
 console.log(carrosPropriedades["nome"]);
 console.log(carrosPropriedades.modelo);
 console.log(carrosPropriedades['modelo']);
+
+
+const pessoa = {
+    primeironome: 'Marcos',
+    idade: 23,
+    bairro: 'Peixinhos',
+    completo: function(){
+        return this.primeironome + ' ' + this.idade
+    }
+}
+console.log(pessoa.completo())
+
+/*
+Uso da palavra-chave this
+No exemplo acima, this se refere ao próprio objeto person.
+
+this.firstName → acessa a propriedade firstName do objeto person
+this.lastName → acessa a propriedade lastName do objeto person
+
+📌 Ou seja, o método fullName usa dados do próprio objeto para funcionar.
+*/
+
+//Como exibir o objeto na tela
+//1. Usando JSON.stringify() (mais comum)
+const objetoTexto = JSON.stringify(pessoa) //IUsando o metodo stringinfy do JSON
+console.log(objetoTexto)
+
+//2. Acessando as propriedades do objeto
+const texto = pessoa.primeironome + ', ' + pessoa.idade + ', ' + pessoa.bairro
+console.log(texto)
+
+/*Object Constructor Functions (Funções Construtoras)
+
+Às vezes precisamos criar vários objetos do mesmo tipo.
+Para isso, usamos uma função construtora.
+
+➡️ Boa prática: o nome da função construtora começa com letra maiúscula.
+*/
+
+function Pessoa(primeiroNome, segundoNome, idadePessoa, olhos){
+    this.primeioro = primeiroNome;
+    this.segundo = segundoNome;
+    this.idade = idadePessoa;
+    this.oio = olhos
+}
+const resultado = new Pessoa('MARCOS', 'VIICIUS',23,'Verdes')
+console.log(resultado)

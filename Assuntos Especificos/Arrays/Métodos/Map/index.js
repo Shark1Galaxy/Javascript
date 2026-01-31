@@ -1,4 +1,17 @@
-/*Sintaxe: array.map(function(currentValue, index, array), thisValue) */
+/*
+A sintaxe básica é:
+array.map(callback(element, index, array), thisArg)
+
+• callback: função que será executada para cada elemento.
+• Recebe:
+
+o element: o valor do elemento atual.
+o index (opcional): a posição do elemento no array.
+o array (opcional): o array original.
+
+• thisArg (opcional): valor a ser usado como this dentro do callback.
+*/
+
 const numbers = [1, 2, 3, 4, 5];
 
 const numbersMultpliedByTwo = numbers.map(function(number){

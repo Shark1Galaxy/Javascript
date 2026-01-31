@@ -1,0 +1,1 @@
+const sum = numbers => numbers.reduce((acumulador,valorAtual) => acumulador + valorAtual,0)
