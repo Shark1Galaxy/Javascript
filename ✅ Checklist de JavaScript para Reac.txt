@@ -49,7 +49,7 @@
  Promises
  async / await
  fetch (requisições HTTP)
- try / catch
+ try / catch  - (x)
 
 9. Módulos
 

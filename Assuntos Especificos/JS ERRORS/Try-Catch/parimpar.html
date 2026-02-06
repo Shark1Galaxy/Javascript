@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            width: 30%;
+            height: 80px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Par ou Impar</h1>
+            <form>
+                <input type="button" value="Clique para iniciar" onclick="clicou()">
+                <div id="resultado">Valor</div>
+            </form>
+        </section>
+    </main>
+    <script>
+        function clicou(){1010
+           const entradaDados = prompt('Digite um valor por Favor');
+           const resultadoFinal = document.querySelector('div#resultado')
+            if(isNaN(entradaDados)){
+                throw Error('Digite um numero correto')
+            }
+           return entradaDados % 2 === 0 ? resultadoFinal.innerHTML = `O valor(${entradaDados}) é par` : resultadoFinal.innerHTML = `O valor(${entradaDados}) é impar`
+        }
+        try{
+            clicou()
+        } catch(error){
+            alert('Deu ruim: ' + error.message)
+        }
+    </script>
+</body>
+</html>

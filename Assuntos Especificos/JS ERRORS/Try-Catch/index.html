@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="campo" value="Valor do input">
+<script>
+    function getInputValue(id){
+        const dom = document.querySelector('#' + id)
+        return dom.value
+    }
+
+    try{
+        const valorEntrada = getInputValue('campoInesxistene');
+        alert(valorEntrada);
+    }catch(err){ //isso aqui é uma variavel que vai armazernar o erro. mas você pode usar qualquer nome, mas como boa prática usar - (e,err,ou error)
+        alert('DEU ERROR: ' + err.message)
+        console.log(err.message)
+    }
+    alert('FIM DO PROGRAMA')
+</script>
+</body>
+</html>
