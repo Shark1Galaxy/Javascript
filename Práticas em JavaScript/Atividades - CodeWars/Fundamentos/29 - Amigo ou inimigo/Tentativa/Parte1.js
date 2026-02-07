@@ -1,0 +1,1 @@
+const friend = friends => friends.filter(n => n.length === 4)

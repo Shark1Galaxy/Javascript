@@ -1,5 +1,5 @@
 
-try {
+try { //Vai executar isso, se não der certo; executa o de baixo
     console.log(nExisto);
  } catch(err){
     console.log('nExisto a variavel Não existo');

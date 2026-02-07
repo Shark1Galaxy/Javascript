@@ -37,19 +37,3 @@ Processo
 Antes de tudo ,precisamos verficair como podemos filtaer os numeros que são maiores que os outros dentro do array
 
 */
-
-
-function pickPeaks(arr){
-    let arrayPosition = []
-    let peack1 = []
-    for(let i = 1; i < arr.length - 1; i++){
-        //lOGICA: O 1 indice que é 5 > 1 - esse 1 é o anterior e 5 > 1 - esse é o final do array.
-        if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
-            arrayPosition.push(i)
-            peack1.push(arr[i])
-        }
-    }
-    return {pos: arrayPosition , peaks: peack1}
-}
-const resultado = pickPeaks([1, 5, 1])
-console.log(resultado)
