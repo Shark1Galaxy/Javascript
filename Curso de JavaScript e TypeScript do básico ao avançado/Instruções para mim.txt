@@ -1,9 +1,12 @@
 1 JavaScript Básico - Básico ao Intermediário
 #Bloco002; #Bloco003; #Bloco004(x); #Bloco005(x); 
-#Bloco006(x); #Bloco007(x); #Bloco008(x); 
+#Bloco006(x); #Bloco007(x); #Bloco008(x); #Bloco009(x);#Bloco010(x);
+
+#Bloco011() - more of the try and catch - 16:04
+#Bloco011() - exercims about setInterval - 54:29
 
 2 - JavaScript (Avançado)
-#Bloco009(x);#Bloco010(x);#Bloco011(); #Bloco012; #Bloco013; #Bloco014;
+#Bloco011(); #Bloco012; #Bloco013; #Bloco014;
 #Bloco015; #Bloco016; #Bloco017; #Bloco018
 
 3 - JavaScript Classes - Programação Orientada a Objetos - POO e 

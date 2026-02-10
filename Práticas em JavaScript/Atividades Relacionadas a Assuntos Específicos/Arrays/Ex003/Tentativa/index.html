@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Arrays </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aquamarine;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        section{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #resultado{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <form>
+                <label for="">Digite os numeros por favor</label>
+                <input type="text" id="numeros" name="numeros">
+                <button>Enviar</button>
+                <div id="resultado"></div>
+            </form>
+        </section>
+    </main>
+    <script>
+        const entradaNumeros = document.querySelector('#numeros');
+        let arrayVazia = []
+        const button = document.querySelector('button').addEventListener('click', function(evento){
+            const resultadoFinal = document.querySelector('#resultado')
+            evento.preventDefault()
+            if(entradaNumeros.value === '' || Number(entradaNumeros.value) === 0){
+                alert('Zeron ão')
+            }else if(arrayVazia.length < 3){
+            arrayVazia.unshift(Number(entradaNumeros.value))
+            resultadoFinal.innerHTML += `Valor ${entradaNumeros.value} adicionado <br>`          
+            }else {
+                resultadoFinal.innerHTML = String(arrayVazia)
+            }
+        })
+    </script>
+</body>
+</html>

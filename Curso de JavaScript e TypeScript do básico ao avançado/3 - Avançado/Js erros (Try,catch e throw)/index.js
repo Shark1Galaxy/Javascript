@@ -19,3 +19,22 @@ try{
     // console.log(error) - Não uasr esse metodo pois é mega perigoso
     console.log('Alguma coisa mais amigável')
 }
+
+try {
+    console.log(a);
+    console.log('Abri um arquivo');
+    console.log('Manipulei o arquivo e gerou erro');
+    console.log('Fechei o arquivo');
+    try{
+        console.log(a)
+    }catch(e){
+        console.log('Deu erros')
+    } finally{
+        console.log('Também so finally')
+    }
+
+} catch(error){
+    console.log('Tratando o error');
+} finally{
+    console.log('Finally Eu sempre sou execultados');
+}

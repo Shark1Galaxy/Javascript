@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgb(4, 184, 207);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        main > section h1{
+            background-image: linear-gradient(to right, blue,rgba(0, 0, 255, 0.384));
+            color: white;
+            padding: 10px;
+        }
+        main{
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.123);
+        }
+        button {
+        --color: #0077ff;
+        font-family: inherit;
+        display: inline-block;
+        width: 6em;
+        height: 2.6em;
+        line-height: 2.5em;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 20px;
+        font-size: 17px;
+        z-index: 1;
+        color: var(--color);
+        border: 2px solid var(--color);
+        border-radius: 6px;
+        position: relative;
+        }
+
+        button::before {
+        position: absolute;
+        content: "";
+        background: var(--color);
+        width: 150px;
+        height: 200px;
+        z-index: -1;
+        border-radius: 50%;
+        }
+
+        button:hover {
+        color: white;
+        }
+
+        button:before {
+        top: 100%;
+        left: 100%;
+        transition: 0.3s all;
+        }
+
+        button:hover::before {
+        top: -30px;
+        left: -30px;
+        }
+
+        #hora{
+            padding: 20px;
+            font-size: 2em;
+            margin-bottom: -20px;
+        }
+        .pausado{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Meu Timer</h1>
+            <div id="hora">00:00:00</div>
+            <div id="buttons">
+                <button id="iniciar">Iniciar</button>
+                <button id="parar">Parar</button>
+                <button id="zerar">Zerar</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        function getTimeFromSecond(second){
+            const data = new Date(second * 1000);
+            return data.toLocaleTimeString('pt-BR', {
+                hour12: false, // desativa o formato de 12 horas
+                timeZone: 'UTC' // define o fuso horário como UTC para evitar diferenças de horário local   
+            })
+        }
+        const relogio = document.querySelector('#hora');
+        const iniciar = document.querySelector('#iniciar');
+        const parar = document.querySelector('#parar');
+        const zerar = document.querySelector('#zerar');
+        let segundos = 0;
+        let timer;
+
+
+        function iniciaRelogio(){
+            timer = setInterval(function(){
+                segundos++
+                relogio.innerHTML = getTimeFromSecond(segundos);
+            }, 1000);
+        }
+
+        iniciar.addEventListener('click', function(evento){
+            relogio.classList.remove('pausado');
+            clearInterval(timer);
+            iniciaRelogio()
+        });
+
+        parar.addEventListener('click', function(evento){
+            clearInterval(timer);
+            relogio.classList.add('pausado');
+        });
+
+        zerar.addEventListener('click', function(evento){
+            relogio.classList.remove('pausado');
+            clearInterval(timer);
+            relogio.innerHTML = '00:00:00'
+            segundos = 0;
+        });
+
+        /*Modo simplificado*/
+
+        /*
+        document.addEventListener('click', function(evento){
+            const elemento = evento.target;
+            if(elemento.classList.contains('iniciar')){
+                relogio.classList.remove('pausado');
+                clearInterval(timer);
+                iniciaRelogio()
+            } else if(elemento.classList.contains('parar')){
+                clearInterval(timer);
+                relogio.classList.add('pausado');
+            } else if(elemento.classList.contains('zerar')){
+                relogio.classList.remove('pausado');
+                clearInterval(timer);
+                relogio.innerHTML = '00:00:00'
+                segundos = 0;
+            }
+        });
+        */
+    
+    </script>
+</body>
+</html>

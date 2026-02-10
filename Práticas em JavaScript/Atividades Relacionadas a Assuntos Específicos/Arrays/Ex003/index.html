@@ -25,7 +25,7 @@
             resultadoFinal.innerHTML += `Na ordem decrescente é: ${arrayVazia.reverse()}`;
             arrayVazia = []
           } else {
-            arrayVazia.push(Number(valoresEntrando.value))
+            arrayVazia.unshift(Number(valoresEntrando.value))
             resultadoFinal.innerHTML += `Valor ${Number(valoresEntrando.value)} adicionado <br>`
           }
         }

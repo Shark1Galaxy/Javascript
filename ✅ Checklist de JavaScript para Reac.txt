@@ -40,7 +40,7 @@
  && para renderização condicional - (X)
 
 7. Escopo e contexto
- Escopo de bloco
+ Escopo de bloco - (x)
  Closures (conceito)
 
 8. Assíncrono
